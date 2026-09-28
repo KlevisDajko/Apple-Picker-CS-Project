@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basketPrefab: {fileID: 7004262401992914542, guid: 970b68a69c9b04594a2b20d738bbda73, type: 3}
-  numBaskets: 3
+  numBaskets: 4
   basketBottomY: -14
   basketSpacingY: 2
   basketList: []
@@ -676,6 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134c543f21b194edbbe22f2d3889f9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetHighScoreNow: 0
 --- !u!1001 &2856189605653735087
 PrefabInstance:
   m_ObjectHideFlags: 0
