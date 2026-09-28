@@ -11,10 +11,22 @@ public class ApplePicker : MonoBehaviour
     public float basketBottomY = -14f;
     public float basketSpacingY = 2f;
 
+    [Header("Start Screen")]
+    public GameObject startPanel;
+
     public List<GameObject> basketList;
 
     void Start()
     {
+        // Show the start screen
+        if (startPanel != null)
+        {
+            startPanel.SetActive(true);
+        }
+
+        // Pause the game until Start is clicked
+        Time.timeScale = 0;
+
         basketList = new List<GameObject>();
 
         for (int i = 0; i < numBaskets; i++)
@@ -28,6 +40,18 @@ public class ApplePicker : MonoBehaviour
 
             basketList.Add(tBasketGO);
         }
+    }
+
+    public void StartGame()
+    {
+        // Hide the start screen
+        if (startPanel != null)
+        {
+            startPanel.SetActive(false);
+        }
+
+        // Start the game
+        Time.timeScale = 1;
     }
 
     public void AppleMissed()
